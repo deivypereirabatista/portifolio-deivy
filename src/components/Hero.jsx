@@ -8,7 +8,7 @@ function Hero() {
         <h2>Desenvolvedor Web</h2>
 
         <p>
-          Desenvolvo aplicações web com foco em JavaScript, React e Python.
+          Desenvolvo aplicações web com foco em JavaScript, React e Node.
         </p>
 
         <button>Ver meus projetos</button>

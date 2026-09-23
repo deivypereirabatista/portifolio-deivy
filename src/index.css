@@ -57,23 +57,58 @@ button {
   cursor: pointer;
 }
 
+/* Barra de Navegação */
+nav {
+  width: 100%;
+  padding: 24px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.nav-logo h2{
+  margin: 0;
+  font-size: 24px;
+  color: #2f8f5b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #17201c;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #2f8f5b;
+}
+
+/* Botão do Menu */
+.menu-button{
+  display: none;
+  border: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 
 /* Responsividade */
 
-@media (max-widht: 768px) {
-    section {
-      padding: 40px 24px;
-    }
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
 
-    h1 {
-      font-size: 44px;
-    }
+  .menu-button {
+    display: block;
+    color: #17201c;
+  }
+    
 
-    h2 {
-      font-size: 26px;
-    }
-
-    section p:not(:first-child) {
-      font-size: 16px;
-    }
 }
