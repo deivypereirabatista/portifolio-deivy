@@ -118,8 +118,35 @@ nav {
   gap: 60px;
 }
 
+
 .hero-content{
   max-width: 600px;
+}
+
+.hero-content p:first-child {
+  color: var(--primary);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  margin-bottom: 8px;
+}
+
+.hero-content h2 {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.hero-content p:not(:first-child) {
+  max-width: 550px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
 }
 
 .hero-image {
