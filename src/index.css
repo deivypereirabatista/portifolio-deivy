@@ -176,6 +176,38 @@ nav {
   margin-bottom: 16px;
 }
 
+/* Seção Tecnologies/Tecnologias */
+.technologies {
+  padding: 80px;
+}
+
+.technologies h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.technology-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+}
+
+.technology-list div {
+  background-color: var(--card);
+  padding: 30px;
+  border-radius: 12px;
+  color: var(--text);
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.technology-list div:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
 
 /* Responsividade */
 
