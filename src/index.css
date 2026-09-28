@@ -4,10 +4,19 @@
   box-sizing: border-box;
 }
 
+
+:root {
+  --background: #0f172a;
+  --card: #111827;
+  --primary: #2563eb;
+  --text: #f8fafc;
+  --text-secondary: #94a3b8;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8faf9;
-  color: #17201c;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 main {
@@ -15,7 +24,6 @@ main {
 }
 
 section {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,8 +58,8 @@ section p:not(:first-child) {
 button {
   border: none;
   padding: 14px 24px;
-  background-color: #2f8f5b;
-  color: white;
+  background-color: var(--primary);
+  color: var(--text);
   font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
@@ -64,14 +72,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--background);
+  border-bottom: 1px solid #1e293b;
   position: relative;
 }
 
 .nav-logo h2{
   margin: 0;
   font-size: 24px;
-  color: #2f8f5b;
+  color: var(--text);
 }
 
 .nav-links {
@@ -80,13 +89,14 @@ nav {
 }
 
 .nav-links a {
-  color: #17201c;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 16px;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #2f8f5b;
+  color: var(--text);
 }
 
 /* Botão do Menu */
@@ -96,6 +106,47 @@ nav {
   background: none;
   font-size: 28px;
   cursor: pointer;
+}
+
+/* Seção Inicio/Hero */
+.hero {
+  min-height: 100vh;
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-content{
+  max-width: 600px;
+}
+
+.hero-image {
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0; /* Aprendizado novo. O elemento não reduz automaticamente por falta de espaço */
+}
+
+/* Seção Sobre/About */
+
+.about {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about h2 {
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+.about p {
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 
@@ -112,16 +163,22 @@ nav {
     position: absolute;
     top: 100%;
     right: 24px;
-    background-color: #fff;
+    background-color: var(--primary);
     padding: 20px;
     gap: 20px;
+    border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
 
   .menu-button {
     display: block;
-    color: #17201c;
+    color: var(--text);
   }
     
+
+  /* inicio/Hero */
+  .hero {
+    flex-direction: column;
+  }
 
 }
