@@ -5,10 +5,22 @@ function Projects() {
 
             <div className="project-list">
                 <article className="project-card">
-                    <h3>Projeto  1</h3>
+
+                    <img src="/images/idb-central.png" alt="Site IDB Central Trindade" />
+
+                    <h3>Site IDB CENTRAL</h3>
 
                     <p>
-                        Descrição e tecnologias
+                        Site desenvolvido para a Igreja de Deus no Brasil,
+                        com o objetivo de apresentar informações, conteúdos e recursos da igreja aos seus membros e visitantes.
+                    </p>
+
+                    <p className="project-technologies">
+                        JavaScript • HTML • CSS
+                    </p>
+
+                    <p className="project-hosting">
+                        Hospedado na Netlify
                     </p>
 
                     <button>Ver Projeto</button>
