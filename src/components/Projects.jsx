@@ -23,8 +23,33 @@ function Projects() {
                         Hospedado na Netlify
                     </p>
 
-                    <button>Ver Projeto</button>
+                    <a href="https://idbcentraltrindade.com.br/" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
                 </article>
+
+                <article className="project-card">
+                    <img src="/images/site-deivy.png" alt="Site Comercial Deivy Batista" />
+
+                    <h3>Site Comercial Próprio</h3>
+
+                    <p>
+                        Site desenvolvido para apresentar serviços de desenvolvimento web,
+                        destacando soluções personalizadas, landing pages e sistemas para empresas
+                        e profissionais..
+                    </p>
+
+                    <p className="project-technologies">
+                        JavaScript • HTML • CSS
+                    </p>
+
+                    <p className="project-hosting">
+                        Hospedado na Netlify
+                    </p>
+
+
+                    <a href="https://deivybatista.netlify.app/" target="_blank" rel="noopener noreferrer"> Ver Projeto</a>
+                </article>
+
+
             </div>
         </section>
     )
