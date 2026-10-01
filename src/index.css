@@ -297,6 +297,38 @@ nav {
 }
 
 
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--card);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none; /* Remover contorno padrão */
+  border-color: var(--primary); /* Adicionar contorno próprio */
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.contact textarea {
+  min-height: 160px;
+  resize: vertical; /* Só deixar aumentar na vertical, e nunca na horizontal*/
+}
+
+.contact button {
+  align-self: flex-start;
+}
+
 
 /* Responsividade */
 
