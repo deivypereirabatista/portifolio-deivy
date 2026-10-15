@@ -9,21 +9,26 @@ function Navbar() {
     }
 
     return(
-        <nav>
-            <div className="nav-logo">
-                <h2>Deivy Batista</h2>
-            </div>
+        <nav className="navbar">
+            <div className="nav-container">
+                <div className="nav-logo">
+                    <a href="#inicio">Deivy</a>
+                </div>
             
-            <button className="menu-button" onClick={() => setMenuAberto(!menuAberto)}>
-                {menuAberto ? '✕' : '☰'}
-            </button>
+            
+                {/* Botão hamburguer para mobile */}
+                <button className="menu-button" onClick={() => setMenuAberto(!menuAberto)}>
+                    {menuAberto ? '✕' : '☰'}
+                </button>
 
-            <div className={`nav-links ${menuAberto ? 'aberto' : ''}`}>
-                <a href="#inicio" onClick={fecharMenu}>Inicio</a>
-                <a href="#sobre" onClick={fecharMenu}>Sobre</a>
-                <a href="#tecnologia" onClick={fecharMenu}>Tecnologia</a>
-                <a href="#projetos" onClick={fecharMenu}>Projetos</a>
-                <a href="#contato" onClick={fecharMenu}>Contato</a>
+                {/* Menu dos Links */}
+                <div className={`nav-links ${menuAberto ? 'aberto' : ''}`}>
+                    <a href="#inicio" className="active" onClick={fecharMenu}>Inicio</a>
+                    <a href="#sobre" onClick={fecharMenu}>Sobre</a>
+                    <a href="#tecnologia" onClick={fecharMenu}>Tecnologia</a>
+                    <a href="#projetos" onClick={fecharMenu}>Projetos</a>
+                    <a href="#contato" className="nav-btn-contato" onClick={fecharMenu}>Contato</a>
+                </div>
             </div>
         </nav>
 
