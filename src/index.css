@@ -19,7 +19,7 @@
   --text-secundary: #94a3b8; /* Parágrafos e legendas */
   --text-muted: #64748b; /* Detalhes menores e placeholders */
 
-  --font-main: 'Inter', sans-serif; /* Fonte padrão */
+  --font-main: sans-serif; /* Fonte padrão */
 }
 
 body {
