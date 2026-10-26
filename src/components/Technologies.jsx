@@ -1,7 +1,9 @@
+import "./Technologies.css"
+
 function Technologies() {
     return(
         <section id="tecnologias" className="technologies">
-            <h2>Tecnologias</h2>
+            <h2 className="titles">Tecnologias</h2>
 
             <div className="technology-list">
                 <div>JavaScript</div>

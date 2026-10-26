@@ -1,0 +1,26 @@
+/* Seção Sobre/About */
+
+.image-about img {
+  width: 35rem;
+  border-radius: 3rem;
+}
+
+.about {
+  padding: 2rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+.about p {
+  max-width: 700px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+

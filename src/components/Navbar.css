@@ -1,0 +1,115 @@
+/* Barra de Navegação */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(10, 13, 20, 0.8); /* Semi transparente */
+  backdrop-filter: blur(12px); /* Efeito vidro moderno */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo a {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+}
+
+/* inficador ativo sutil */
+.nav-links a.active {
+  color: var(--primary);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+/* Botão de destaque Contato */
+.nav-btn-contato {
+  background-color: var(--primary);
+  color: #ffffff !important;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600 !important;
+  transition: background-color 0.2s ease, transform 0.1s ease !important;
+}
+
+.nav-btn-contato:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.nav-btn-contato.active::after {
+  display: none; /* Tirar traço azul no botão */
+}
+
+/* Botão do Menu */
+.menu-button{
+  display: none;
+  border: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.aberto {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 24px;
+    background-color: var(--primary);
+    padding: 20px;
+    gap: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-button {
+    display: block;
+    color: var(--text);
+  }
+}
+
