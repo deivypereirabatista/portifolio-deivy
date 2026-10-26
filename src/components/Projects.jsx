@@ -3,7 +3,7 @@ import "./Projects.css"
 function Projects() {
     return(
         <section id="projetos" className="projects">
-            <h2>Meus projetos</h2>
+            <h2 className="titles">Meus projetos</h2>
 
             <div className="project-list">
                 <article className="project-card">
@@ -12,16 +12,16 @@ function Projects() {
 
                     <h3>Site IDB CENTRAL</h3>
 
-                    <p>
+                    <p className="generals-texts">
                         Site desenvolvido para a Igreja de Deus no Brasil,
                         com o objetivo de apresentar informações, conteúdos e recursos da igreja aos seus membros e visitantes.
                     </p>
 
-                    <p className="project-technologies">
+                    <p className="generals-texts">
                         JavaScript • HTML • CSS
                     </p>
 
-                    <p className="project-hosting">
+                    <p className="generals-texts">
                         Hospedado na Netlify
                     </p>
 
@@ -33,17 +33,17 @@ function Projects() {
 
                     <h3>Site Comercial Próprio</h3>
 
-                    <p>
+                    <p className="generals-texts">
                         Site desenvolvido para apresentar serviços de desenvolvimento web,
                         destacando soluções personalizadas, landing pages e sistemas para empresas
                         e profissionais..
                     </p>
 
-                    <p className="project-technologies">
+                    <p className="generals-texts">
                         JavaScript • HTML • CSS
                     </p>
 
-                    <p className="project-hosting">
+                    <p className="generals-texts">
                         Hospedado na Netlify
                     </p>
 
