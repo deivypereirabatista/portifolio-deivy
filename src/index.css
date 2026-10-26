@@ -34,11 +34,7 @@ main {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 80px;
+  padding: 2rem 25rem;
 }
 
 section p:first-child {
@@ -73,6 +69,34 @@ button {
   font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+/* Fontes */
+@font-face {
+    font-family: 'CarbonaExtraBold';
+    src: url('/fonts/CarbonaTest-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CarbonaLight';
+    src: url('/fonts/CarbonaTest-Light.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Componentes Gerais */
+.titles {
+  color: var(--primary);
+  font-family: 'CarbonaExtraBold', sans-serif;
+}
+
+.generals-texts {
+  font-family: 'CarbonaLight', sans-serif;
+  font-size: 0.01rem;
 }
 
 /* Barra de Navegação */
@@ -319,11 +343,16 @@ button {
 
 /* Seção Sobre/About */
 
+.image-about img {
+  width: 35rem;
+  border-radius: 3rem;
+}
+
 .about {
-  padding: 80px;
+  padding: 2rem 22rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .about h2 {
@@ -333,7 +362,7 @@ button {
 
 .about p {
   max-width: 700px;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 16px;
 }
