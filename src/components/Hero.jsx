@@ -50,7 +50,7 @@ function Hero() {
           {/* Se você tiver uma foto sua na pasta assets, aponte aqui. Se não tiver, pode deixar uma foto provisória ou o mockup */}
           <div className="hero-avatar-wrapper">
             <img 
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" 
+              src="./images/minha-imagem.png" 
               alt="Deivy" 
               className="hero-avatar"
             />
