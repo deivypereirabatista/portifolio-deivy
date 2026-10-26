@@ -34,29 +34,11 @@ main {
 }
 
 
-section p:first-child {
-  color: #2f8f5b;
-  font-size: 18px;
-  margin-bottom: 12px;
-}
-
 h1 {
   font-size: 64px;
   margin-bottom: 8px;
 }
 
-h2 {
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 24px;
-}
-
-section p:not(:first-child) {
-  max-width: 550px;
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 32px;
-}
 
 button {
   border: none;
@@ -89,6 +71,7 @@ button {
 .titles {
   color: var(--primary);
   font-family: 'CarbonaExtraBold', sans-serif;
+  padding-bottom: 2rem;
 }
 
 .generals-texts {

@@ -1,22 +1,20 @@
 /* Seção Tecnologies/Tecnologias */
 .technologies {
-  padding: 80px;
-}
-
-.technologies h2 {
-  font-size: 40px;
-  margin-bottom: 40px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 5rem;
 }
 
 .technology-list {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 900px;
 }
 
 .technology-list div {
-  background-color: var(--card);
   padding: 30px;
   border-radius: 12px;
   color: var(--text);
@@ -30,3 +28,10 @@
   border-color: var(--primary);
 }
 
+.cards-tech {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
