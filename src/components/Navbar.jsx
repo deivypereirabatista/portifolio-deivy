@@ -14,7 +14,7 @@ function Navbar() {
         <nav className="navbar">
             <div className="nav-container">
                 <div className="nav-logo">
-                    <a href="#inicio">Deivy</a>
+                    <a href="#inicio">Deivy Batista</a>
                 </div>
             
             
