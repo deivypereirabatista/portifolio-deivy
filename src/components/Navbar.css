@@ -18,11 +18,22 @@
   align-items: center;
 }
 
+.nav-logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .nav-logo a {
   font-size: 20px;
   font-weight: 700;
   color: var(--text-primary);
   text-decoration: none;
+}
+
+.nav-logo img {
+  width: 2rem;
+  border-radius: 0.5rem;
 }
 
 .nav-links {

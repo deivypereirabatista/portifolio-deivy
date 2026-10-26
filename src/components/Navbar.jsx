@@ -14,6 +14,7 @@ function Navbar() {
         <nav className="navbar">
             <div className="nav-container">
                 <div className="nav-logo">
+                    <img src="./images/minha-logo-otimizada.png" alt="Logo DB" />
                     <a href="#inicio">Deivy Batista</a>
                 </div>
             
