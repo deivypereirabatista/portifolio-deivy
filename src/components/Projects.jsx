@@ -57,7 +57,7 @@ function Projects() {
                             </p>
                         </div>
 
-                        <a href="https://idbcentraltrindade.com.br/" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+                        <a href="https://deivybatista.netlify.app/" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
                         </div>           
                 </article>
 
