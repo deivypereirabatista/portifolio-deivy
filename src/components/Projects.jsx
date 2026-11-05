@@ -12,7 +12,7 @@ function Projects() {
                     </div>
                     
                     <div className="text-project">
-                        <h3>Site IDB CENTRAL</h3>
+                        <h3 className="title-project">Site IDB CENTRAL</h3>
                         <div className="description-project">
                             <p className="generals-texts">
                             Site desenvolvido para a Igreja de Deus no Brasil,
@@ -40,7 +40,7 @@ function Projects() {
                     </div>
                     
                     <div className="text-project">
-                        <h3>Site Pessoal Deivy Batista</h3>
+                        <h3 className="title-project">Site Pessoal Deivy Batista</h3>
                         <div className="description-project">
                             <p className="generals-texts">
                             Site desenvolvido para apresentar serviços de desenvolvimento web, destacando soluções personalizadas, landing pages e sistemas para empresas e profissionais.
