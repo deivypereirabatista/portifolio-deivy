@@ -60,7 +60,6 @@ function Projects() {
                         <a href="https://deivybatista.netlify.app/" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
                         </div>           
                 </article>
-
             </div>
         </section>
     )
