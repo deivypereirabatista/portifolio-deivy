@@ -72,7 +72,10 @@ button {
   color: var(--primary);
   font-family: 'CarbonaExtraBold', sans-serif;
   padding-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .generals-texts {
