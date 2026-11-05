@@ -1,15 +1,24 @@
-import { useState } from "react"
-
 import "./Contact.css"
 
 function Contact() {
-
-    const [nome, setNome] = useState("")
-
     function handleSubmit(event) {
         event.preventDefault()
 
-        console.log("Formulário enviado")
+        const { nome, email, assunto, mensagem } = Object.fromEntries(
+            new FormData(event.currentTarget)
+        )
+
+        const texto = `Olá, Deivy! Vim pelo seu portfólio.
+
+*Nome:* ${nome}
+*E-mail:* ${email}
+*Qual Projeto:* ${assunto}
+
+*Sobre o Projeto:*
+${mensagem}`
+
+        const url = `https://wa.me/5562996883636?text=${encodeURIComponent(texto)}`
+        window.open(url, "_blank", "noopener,noreferrer")
     }
 
     return(
@@ -30,11 +39,11 @@ function Contact() {
                     </div>
                     <div className="card-my-contact">
                         <div className="icon-card-my-contact">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more preview-icon"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-git-2 preview-icon"><path d="M18 19a5 5 0 0 1-5-5v8"/><path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5"/><circle cx="13" cy="12" r="2"/><circle cx="20" cy="19" r="2"/></svg>
                         </div>
                         <div className="text-card-my-contact">
-                            <p className="clean-text">WhatsApp</p>
-                            <p className="generals-texts">(62)996883636</p>
+                            <p className="clean-text">GitHub</p>
+                            <p className="generals-texts"><a href="https://github.com/deivypereirabatista" target="_blank" rel="noopener noreferrer">github.com/deivypereirabatista</a></p>
                         </div>
                     </div>
                     <div className="card-my-contact">
@@ -43,45 +52,47 @@ function Contact() {
                         </div>
                         <div className="text-card-my-contact">
                             <p className="clean-text">Linkedin</p>
-                            <p className="generals-texts">linkedin.com/in/deivy-batista</p>
+                            <p className="generals-texts"><a href="https://www.linkedin.com/in/deivy-batista/" target="_blank" rel="noopener noreferrer">in/deivy-batista</a></p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="second-contact">
                 <form onSubmit={handleSubmit}>
-                    <h2>Envie uma mensagem</h2>
+                    <h2>Conte sobre o projeto</h2>
                     <div className="primary-info">
                         <div className="field">
                             <label htmlFor="nome">Nome</label>
                             <input 
                                 id="nome"
+                                name="nome"
                                 type="text" 
                                 placeholder="Seu nome"
-                                value={nome} 
-                                onChange={(event) => setNome(event.target.value)}
+                                required
                             />
                         </div>
                         <div className="field">
                             <label htmlFor="email">E-mail</label>
                             <input 
                                 id="email"
+                                name="email"
                                 type="email" 
                                 placeholder="email@email.com"
+                                required
                             />
                         </div>
                     </div>
                     
                     <div className="field">
-                        <label htmlFor="assunto">Assunto</label>
-                        <input id="assunto" type="text" placeholder="Ex.: Quero um site para o meu negócio" />
+                        <label htmlFor="assunto">Qual projeto</label>
+                        <input id="assunto" name="assunto" type="text" placeholder="Ex.: Quero um site para o meu negócio" required/>
                     </div>
                     <div className="field">
-                        <label htmlFor="mensagem">Mensagem</label>
-                        <textarea id="mensagem" placeholder="Conte um pouco sobre o que você precisa..."></textarea>
+                        <label htmlFor="mensagem">Sobre o projeto</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre o que você precisa..." required></textarea>
                     </div>
 
-                    <button type="submit">Enviar mensagem</button>
+                    <button type="submit">Continuar no WhatsApp</button>
                 </form>
             </div>
 

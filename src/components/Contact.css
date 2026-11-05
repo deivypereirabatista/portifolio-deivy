@@ -110,3 +110,8 @@
   font-size: 0.9rem;
   font-family: 'CarbonaLight', sans-serif;
 }
+
+.text-card-my-contact a{
+  text-decoration: none;
+  color: var(--text-primary);
+}
