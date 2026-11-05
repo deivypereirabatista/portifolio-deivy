@@ -6,24 +6,24 @@
 
 
 :root {
-  --bg-primary: #0a0d14; /* Fundo escuro geral */
-  --bg-secundary: #0f1422; /* Fundo da navbar ou áreas alternadas */
-  --bg-card: #111827; /* Fundo dos cards e inputs */
-  --border-card: rgba(255, 255, 255, 0.08); /* Borda sutil dos cards */
+  --bg-primary: #0a0d14;
+  --bg-secundary: #0f1422; 
+  --bg-card: #111827; 
+  --border-card: #325091;
 
-  --primary: #2563eb; /* Azul vibrante dos botões e títulos */
-  --primary-hover: #1d4ed8; /* Tom mais escuto no hover */
-  --primary-glow: rgba(37, 99, 235, 0.25); /* Para efeitos de sombra/brilho */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8; 
+  --primary-glow: rgba(37, 99, 235, 0.25); 
 
-  --text-primary: #ffffff; /* Textos principais e títuos */
-  --text-secundary: #94a3b8; /* Parágrafos e legendas */
-  --text-muted: #64748b; /* Detalhes menores e placeholders */
+  --text-primary: #ffffff;
+  --text-secundary: #94a3b8;
+  --text-muted: #64748b; 
 
-  --font-main: sans-serif; /* Fonte padrão */
+ 
 }
 
 body {
-  font-family: var(--font-main);
+  font-family: 'CarbonaLight', sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   overflow-x: hidden; /* Tirar rolagem horizontal indesejada */

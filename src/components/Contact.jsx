@@ -16,8 +16,8 @@ function Contact() {
         <section id="contato" className="contact">
             <div className="primary-contact">
                 <h2 className="titles">Contatos</h2>
-                <h2>Vamos conversar sobre o seu projeto?</h2>
-                <p>Conte o que você precisa: um site, uma landing page ou um sistema. Respondo o mais rápido possível.</p>
+                <h1 className="title-my-contact">Vamos conversar sobre o seu <span className="color-title-my-conatct">projeto?</span></h1>
+                <p className="generals-texts">Conte o que você precisa: um site, uma landing page ou um sistema. Respondo o mais rápido possível.</p>
                 <div className="my-contact">
                     <div className="card-my-contact">
                         <div className="icon-card-my-contact">
@@ -25,7 +25,7 @@ function Contact() {
                         </div>
                         <div className="text-card-my-contact">
                             <p className="clean-text">E-mail</p>
-                            <p className="text-my-contatc">deivy.pessoal@gmail.com</p>
+                            <p className="generals-texts">deivy.pessoal@gmail.com</p>
                         </div>
                     </div>
                     <div className="card-my-contact">
@@ -34,7 +34,7 @@ function Contact() {
                         </div>
                         <div className="text-card-my-contact">
                             <p className="clean-text">WhatsApp</p>
-                            <p className="text-my-contatc">(62)996883636</p>
+                            <p className="generals-texts">(62)996883636</p>
                         </div>
                     </div>
                     <div className="card-my-contact">
@@ -43,26 +43,43 @@ function Contact() {
                         </div>
                         <div className="text-card-my-contact">
                             <p className="clean-text">Linkedin</p>
-                            <p className="text-my-contatc">linkedin.com/in/deivy-batista</p>
+                            <p className="generals-texts">linkedin.com/in/deivy-batista</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="second-contact">
                 <form onSubmit={handleSubmit}>
-                    <input 
-                        type="text" 
-                        placeholder="Seu nome"
-                        value={nome} 
-                        onChange={(event) => setNome(event.target.value)}
-                    />
-
-                    <input
-                        type="text" 
-                        placeholder="Seu e-mail" 
-                    />
-
-                    <textarea placeholder="Fale sobre seu projeto"></textarea>
+                    <h2>Envie uma mensagem</h2>
+                    <div className="primary-info">
+                        <div className="field">
+                            <label htmlFor="nome">Nome</label>
+                            <input 
+                                id="nome"
+                                type="text" 
+                                placeholder="Seu nome"
+                                value={nome} 
+                                onChange={(event) => setNome(event.target.value)}
+                            />
+                        </div>
+                        <div className="field">
+                            <label htmlFor="email">E-mail</label>
+                            <input 
+                                id="email"
+                                type="email" 
+                                placeholder="email@email.com"
+                            />
+                        </div>
+                    </div>
+                    
+                    <div className="field">
+                        <label htmlFor="assunto">Assunto</label>
+                        <input id="assunto" type="text" placeholder="Ex.: Quero um site para o meu negócio" />
+                    </div>
+                    <div className="field">
+                        <label htmlFor="mensagem">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Conte um pouco sobre o que você precisa..."></textarea>
+                    </div>
 
                     <button type="submit">Enviar mensagem</button>
                 </form>

@@ -5,6 +5,8 @@
   margin: 0 auto;
   padding-top: 5rem;
   display: flex;
+  gap: 5rem;
+  padding-bottom: 3rem;
 }
 
 .contact > p { /* Esse > significa o <p> que é filho direto de .contact */
@@ -13,17 +15,62 @@
   margin-bottom: 32px;
 }
 
+.my-contact {
+  padding-top: 2rem;
+}
+
+.title-my-contact {
+  font-family: 'CarbonaExtraBold', sans-serif;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.color-title-my-conatct {
+  color: var(--primary);
+}
+
+.clean-text {
+  font-size: 1rem;
+  opacity: 0.4;
+  font-family: 'CarbonaLight', sans-serif;
+}
+
+.card-my-contact {
+  border: 0.01rem solid var(--border-card);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.second-contact {
+  padding: 2rem;
+  border: 0.01rem solid var(--border-card);
+  border-radius: 0.5rem;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
 .contact form {
   width: 100%;
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
+  min-width: 30rem;
 }
 
+.primary-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
 
-.contact input,
-.contact textarea {
+.primary-info input,
+.contact textarea, input {
   width: 100%;
   padding: 14px 16px;
   background-color: var(--card);
@@ -34,8 +81,8 @@
   font-family: inherit;
 }
 
-.contact input:focus,
-.contact textarea:focus {
+.primary-info input:focus,
+.primary-info textarea:focus {
   outline: none; /* Remover contorno padrão */
   border-color: var(--primary); /* Adicionar contorno próprio */
 }
@@ -48,9 +95,18 @@
 .contact textarea {
   min-height: 160px;
   resize: vertical; /* Só deixar aumentar na vertical, e nunca na horizontal*/
+  flex: 1;
 }
 
-.contact button {
-  align-self: flex-start;
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
 }
 
+.field label {
+  font-size: 0.9rem;
+  font-family: 'CarbonaLight', sans-serif;
+}
