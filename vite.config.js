@@ -50,6 +50,6 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
   return {
-    plugins: [react(), seo(env.SITE_URL)],
+    plugins: [react(), seo(env.SITE_URL || env.URL)],
   }
 })

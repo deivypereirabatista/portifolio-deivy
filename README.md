@@ -1,16 +1,30 @@
-# React + Vite
+# Portfólio Deivy Batista
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfólio pessoal feito com React e Vite.
 
-Currently, two official plugins are available:
+## Rodar localmente
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Requer Node.js 22 ou superior e pnpm.
 
-## React Compiler
+```bash
+pnpm install
+pnpm dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Comando | O que faz |
+| --- | --- |
+| `pnpm dev` | Servidor de desenvolvimento |
+| `pnpm build` | Gera a versão de produção em `dist/` |
+| `pnpm preview` | Serve a pasta `dist/` localmente |
+| `pnpm lint` | Verifica o código com o Oxlint |
 
-## Expanding the Oxlint configuration
+## Deploy no Netlify
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+As configurações já estão em `netlify.toml`: comando de build, pasta publicada (`dist`), versão do Node, cache dos arquivos e cabeçalhos de segurança.
+
+1. No Netlify, escolha **Add new site → Import an existing project** e conecte este repositório.
+2. Mantenha as configurações detectadas e clique em **Deploy**.
+
+O endereço do site usado no SEO (canonical, Open Graph, `sitemap.xml` e `robots.txt`) vem da variável `URL`, que o Netlify define automaticamente. Para usar outro endereço, como um domínio próprio ainda não configurado no Netlify, cadastre `SITE_URL` em **Site configuration → Environment variables**.
+
+Depois do primeiro deploy, envie `https://seu-site/sitemap.xml` no [Google Search Console](https://search.google.com/search-console) para acelerar a indexação.
