@@ -4,19 +4,17 @@ function Hero() {
   return (
     <section id="inicio" className="hero">
       <div className="hero-container">
-        
-        {/* Lado Esquerdo: Apresentação */}
+
         <div className="hero-content">
           <span className="hero-greeting">Olá, eu sou</span>
           <h1 className="hero-name">Deivy</h1>
           <h2 className="hero-role">
-            Desenvolvedor Web 
+            Desenvolvedor Web
           </h2>
           <p className="hero-description">
             Construindo soluções modernas, funcionais e com foco em boas experiências.
           </p>
 
-          {/* Botões de Ação */}
           <div className="hero-buttons">
             <a href="#projetos" className="btn-primary">
               Ver meus projetos
@@ -26,7 +24,6 @@ function Hero() {
             </a>
           </div>
 
-          {/* Redes Sociais */}
           <div className="hero-socials">
             <a href="https://github.com/deivypereirabatista" target="_blank" rel="noreferrer" aria-label="GitHub">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -38,7 +35,7 @@ function Hero() {
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
               </svg>
             </a>
-            <a href="mailto:deivy.pessoal@gmail.com" aria-label="Email">
+            <a href="mailto:deivy.pessoal@gmail.com" aria-label="E-mail">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
               </svg>
@@ -46,15 +43,16 @@ function Hero() {
           </div>
         </div>
 
-        {/* Lado Direito: Imagem com Efeito Glow */}
         <div className="hero-visual">
           <div className="glow-effect"></div>
-          {/* Se você tiver uma foto sua na pasta assets, aponte aqui. Se não tiver, pode deixar uma foto provisória ou o mockup */}
           <div className="hero-avatar-wrapper">
-            <img 
-              src="./images/minha-imagem.png" 
-              alt="Deivy" 
+            <img
+              src="/images/minha-imagem.png"
+              alt="Foto de Deivy Batista, desenvolvedor web"
               className="hero-avatar"
+              width="1086"
+              height="1448"
+              fetchPriority="high"
             />
           </div>
         </div>

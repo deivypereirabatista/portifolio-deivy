@@ -1,7 +1,6 @@
-/* Seção Inicio/Hero */
 .hero {
   min-height: calc(100vh - 80px);
-  padding: 60px 24px;
+  padding: 60px var(--gutter);
   display: flex;
   align-items: center;
   position: relative;
@@ -17,7 +16,6 @@
   gap: 40px;
 }
 
-
 .hero-content{
   max-width: 580px;
 }
@@ -25,13 +23,13 @@
 .hero-greeting{
   font-size: 16px;
   font-weight: 500;
-  color: var(--text-secundary);
+  color: var(--text-secondary);
   display: block;
-  margin: 8px;
+  margin: 0 0 8px;
 }
 
 .hero-name {
-  font-size: 64px;
+  font-size: clamp(2.75rem, 8vw, 4rem);
   font-weight: 800;
   color: var(--text-primary);
   line-height: 1.1;
@@ -40,7 +38,7 @@
 }
 
 .hero-role {
-  font-size: 38px;
+  font-size: clamp(1.6rem, 4.5vw, 2.375rem);
   font-weight: 700;
   color: var(--primary);
   line-height: 1.2;
@@ -50,18 +48,16 @@
 .hero-description {
   font-size: 17px;
   line-height: 1.6;
-  color: var(--text-secundary);
+  color: var(--text-secondary);
   margin-bottom: 32px;
 }
-
-/* Botões do Hero */
 
 .hero-buttons {
   display: flex;
   gap: 16px;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 36px;
-
 }
 
 .btn-primary {
@@ -99,14 +95,13 @@
   border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
 }
-/* Ícones Sociais */
 .hero-socials {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 .hero-socials a {
-  color: var(--text-secundary);
+  color: var(--text-secondary);
   transition: color 0.2s ease, transform 0.2s ease;
   display: flex;
   align-items: center;
@@ -116,7 +111,6 @@
   color: var(--text-primary);
   transform: translateY(-2px);
 }
-/* Lado Direito: Visual e Glow Neon */
 .hero-visual {
   position: relative;
   display: flex;
@@ -124,7 +118,6 @@
   align-items: center;
   flex: 1;
 }
-/* A esfera azul brilhante no fundo */
 .glow-effect {
   position: absolute;
   width: 380px;
@@ -149,10 +142,118 @@
   object-position: center top;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .hero {
-    flex-direction: column;
+    min-height: auto;
+  }
+
+  .hero-container {
+    gap: 32px;
+  }
+
+  .hero-avatar-wrapper {
+    width: 280px;
+    height: auto;
+    aspect-ratio: 9 / 11;
+  }
+
+  .glow-effect {
+    width: 300px;
+    height: 300px;
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 40px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 560px;
+  }
+
+  .hero-greeting {
+    margin: 0 0 4px;
+  }
+
+  .hero-buttons,
+  .hero-socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .hero-avatar-wrapper {
+    width: 150px;
+    height: 150px;
+    aspect-ratio: auto;
+    border-radius: 50%;
+    border: 2px solid rgba(37, 99, 235, 0.5);
+  }
+
+  .glow-effect {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-greeting {
+    font-size: 14px;
+  }
+
+  .hero-role {
+    margin-bottom: 14px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .hero-buttons {
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    padding: 11px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .hero-socials {
+    gap: 8px;
+  }
+
+  .hero-socials a {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (hover: none) {
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .hero-socials a:hover {
+    transform: none;
+  }
+}

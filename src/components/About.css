@@ -1,14 +1,24 @@
-/* Seção Sobre/About */
+.image-about {
+  flex: 0 1 35rem;
+  min-width: 0;
+}
 
 .image-about img {
-  width: 35rem;
+  display: block;
+  width: 100%;
   border-radius: 3rem;
 }
 
+.description-about {
+  flex: 1 1 22rem;
+  min-width: 0;
+}
+
 .about {
-  max-width: 1100px;
+  max-width: calc(var(--max-content) + 2 * var(--gutter));
   width: 100%;
   margin: 0 auto;
+  padding-inline: var(--gutter);
   display: flex;
   justify-content: space-between;
   gap: 5rem;
@@ -27,3 +37,52 @@
   margin-bottom: 16px;
 }
 
+@media (max-width: 960px) {
+  .about {
+    gap: 2.5rem;
+  }
+
+  .image-about {
+    flex-basis: 45%;
+  }
+
+  .image-about img {
+    border-radius: 1.5rem;
+  }
+
+  .about h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .image-about,
+  .description-about {
+    flex: none;
+    width: 100%;
+  }
+
+  .image-about img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about h2 {
+    font-size: 26px;
+    margin-bottom: 0;
+  }
+
+  .about p {
+    font-size: 15px;
+  }
+}

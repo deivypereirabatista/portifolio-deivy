@@ -1,18 +1,17 @@
-/* Barra de Navegação */
 .navbar {
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(10, 13, 20, 0.8); /* Semi transparente */
-  backdrop-filter: blur(12px); /* Efeito vidro moderno */
+  background-color: rgba(10, 13, 20, 0.8);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px 24px;
+  padding: 18px var(--gutter);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,7 +54,6 @@
   color: var(--text-primary);
 }
 
-/* inficador ativo sutil */
 .nav-links a.active {
   color: var(--primary);
 }
@@ -71,7 +69,6 @@
   border-radius: 2px;
 }
 
-/* Botão de destaque Contato */
 .nav-btn-contato {
   background-color: var(--primary);
   color: #ffffff !important;
@@ -87,20 +84,44 @@
 }
 
 .nav-btn-contato.active::after {
-  display: none; /* Tirar traço azul no botão */
+  display: none;
 }
 
-/* Botão do Menu */
-.menu-button{
+.menu-button {
   display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   border: none;
+  border-radius: 8px;
   background: none;
-  font-size: 28px;
+  color: var(--text-primary);
+  font-size: 26px;
+  line-height: 1;
   cursor: pointer;
 }
 
-/* Responsividade */
+.menu-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 @media (max-width: 768px) {
+  .nav-container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .nav-logo a {
+    font-size: 18px;
+  }
+
+  .menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .nav-links {
     display: none;
   }
@@ -108,19 +129,37 @@
   .nav-links.aberto {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
     position: absolute;
     top: 100%;
-    right: 24px;
-    background-color: var(--primary);
-    padding: 20px;
-    gap: 20px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    right: 0;
+    width: max-content;
+    padding: 8px 12px 14px;
+    background-color: rgba(10, 13, 20, 0.97);
+    border: 1px solid var(--border-card);
+    border-right: none;
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    box-shadow: -8px 16px 32px rgba(0, 0, 0, 0.4);
   }
 
-  .menu-button {
-    display: block;
-    color: var(--text);
+  .nav-links.aberto a {
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.aberto a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-links.aberto a.active::after {
+    display: none;
+  }
+
+  .nav-links.aberto .nav-btn-contato {
+    margin-top: 8px;
+    text-align: center;
   }
 }
-

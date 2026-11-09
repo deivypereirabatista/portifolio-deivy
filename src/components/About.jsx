@@ -4,7 +4,7 @@ function About(){
     return(
         <section id="sobre" className="about">
             <div className="image-about">
-                <img src="./images/minha-imagem-no-computador.png" alt="Imagem no computador" />
+                <img src="/images/minha-imagem-no-computador.png" alt="Deivy Batista trabalhando no computador" width="1536" height="1024" loading="lazy" decoding="async" />
             </div>
 
             <div className="description-about">
@@ -18,7 +18,7 @@ function About(){
                     Atualmente, cursando pós-graduação em Análise e Desenvolvimento de Sistemas, aprofundo meus conhecimentos em arquitetura de software, modelagem, banco de dados e boas práticas de engenharia. Aplico o que aprendo nos meus projetos, o que me permite evoluir continuamente e entregar códigos cada vez mais sólidos e sustentáveis.
                 </p>
             </div>
-            
+
         </section>
     )
 }

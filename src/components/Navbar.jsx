@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import "./Navbar.css"
 
@@ -10,25 +10,40 @@ function Navbar() {
         setMenuAberto(false)
     }
 
+    useEffect(() => {
+        if (!menuAberto) return
+
+        function fecharComEsc(event) {
+            if (event.key === "Escape") setMenuAberto(false)
+        }
+
+        document.addEventListener("keydown", fecharComEsc)
+        return () => document.removeEventListener("keydown", fecharComEsc)
+    }, [menuAberto])
+
     return(
-        <nav className="navbar">
+        <nav className="navbar" aria-label="Navegação principal">
             <div className="nav-container">
                 <div className="nav-logo">
-                    <img src="./images/minha-logo-otimizada.png" alt="Logo DB" />
+                    <img src="/images/minha-logo-otimizada.png" alt="" width="32" height="32" />
                     <a href="#inicio">Deivy Batista</a>
                 </div>
-            
-            
-                {/* Botão hamburguer para mobile */}
-                <button className="menu-button" onClick={() => setMenuAberto(!menuAberto)}>
-                    {menuAberto ? '✕' : '☰'}
+
+                <button
+                    type="button"
+                    className="menu-button"
+                    aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
+                    aria-expanded={menuAberto}
+                    aria-controls="menu-principal"
+                    onClick={() => setMenuAberto(!menuAberto)}
+                >
+                    <span aria-hidden="true">{menuAberto ? '✕' : '☰'}</span>
                 </button>
 
-                {/* Menu dos Links */}
-                <div className={`nav-links ${menuAberto ? 'aberto' : ''}`}>
-                    <a href="#inicio" className="active" onClick={fecharMenu}>Inicio</a>
+                <div id="menu-principal" className={`nav-links ${menuAberto ? 'aberto' : ''}`}>
+                    <a href="#inicio" className="active" onClick={fecharMenu}>Início</a>
                     <a href="#sobre" onClick={fecharMenu}>Sobre</a>
-                    <a href="#tecnologia" onClick={fecharMenu}>Tecnologia</a>
+                    <a href="#tecnologias" onClick={fecharMenu}>Tecnologia</a>
                     <a href="#projetos" onClick={fecharMenu}>Projetos</a>
                     <a href="#contato" className="nav-btn-contato" onClick={fecharMenu}>Contato</a>
                 </div>
