@@ -7,6 +7,10 @@ function Technologies() {
 
             <div className="technology-list">
                 <div className="cards-tech">
+                    <img src="/images/icons/icon-typescript.png" alt="" width="48" height="48" loading="lazy" />
+                    TypeScript
+                </div>
+                <div className="cards-tech">
                     <img src="/images/icons/icon-javascript.png" alt="" width="48" height="48" loading="lazy" />
                     JavaScript
                 </div>
@@ -25,6 +29,10 @@ function Technologies() {
                 <div className="cards-tech">
                     <img src="/images/icons/icon-node.png" alt="" width="48" height="48" loading="lazy" />
                     Node
+                </div>
+                <div className="cards-tech">
+                    <img src="/images/icons/icon-supabase.png" alt="" width="48" height="48" loading="lazy" />
+                    Supabase
                 </div>
                 <div className="cards-tech">
                     <img src="/images/icons/icon-git.png" alt="" width="48" height="48" loading="lazy" />
